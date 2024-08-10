@@ -22,7 +22,7 @@ A Spotify UI that provides a range of functionalities similar to popular music s
  - ## Frontend
    React, Javascript
  - ## Styling
-   Responsive design principles using Tailwind CSS
+   Tailwind CSS
  - ## Deployment
    Hosted on Vercel.
 
