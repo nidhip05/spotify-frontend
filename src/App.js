@@ -41,9 +41,16 @@ function App() {
         const url = "https://cms.samespace.com/items/songs";
         const res = await axios.get(url);
         if (res?.data) {
-          setData(res?.data?.data);
-          setSelectedSong(res?.data?.data[0]);
-          setBackgroundColor(res?.data?.data[0]?.accent || "#140e04");
+          const songs = res?.data?.data || [];
+          const topTrackSong = songs.find((item) => !item.top_track);
+          if (topTrackSong) {
+            setSelectedSong(topTrackSong);
+            setBackgroundColor(topTrackSong.accent || "#140e04");
+          } else {
+            setSelectedSong(songs[0]);
+            setBackgroundColor(songs[0]?.accent || "#140e04");
+          }
+          setData(songs);
         }
       } catch (err) {
         console.log(err);
