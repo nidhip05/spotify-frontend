@@ -1,4 +1,4 @@
-# Spotify Frontend UI
+# Spotify UI
 
 A Spotify UI that provides a range of functionalities similar to popular music streaming services. The application allows users to search for tracks, control playback, switch between different tabs, and interact with the music via a seeker.
 
